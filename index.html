@@ -17,20 +17,20 @@
       function addtodo() {
         const inputValue = document.getElementById("input").value;
         if (inputValue.trim() === "") {
-          return; // ถ้าไม่มีข้อความให้ข้าม
+          return; 
         }
 
-        // สร้าง element ใหม่ <li>
+        
         let newElement = document.createElement("li");
         newElement.classList.add("list-group-item");
 
-        // สร้าง span สำหรับข้อความ
+        
         let newTxtElement = document.createElement("span");
         newTxtElement.classList.add("todo-item");
         newTxtElement.textContent = inputValue;
         newElement.appendChild(newTxtElement);
 
-        // สร้างปุ่มลบ
+        
         let deleteBtn = document.createElement("button");
         deleteBtn.classList.add("btn", "btn-danger", "delete-btn");
         deleteBtn.textContent = "ลบ";
@@ -39,11 +39,11 @@
         };
         newElement.appendChild(deleteBtn);
 
-        // เพิ่ม element ใหม่ลงใน list
+        
         let listElement = document.getElementById("listtodo");
         listElement.appendChild(newElement);
 
-        // ล้างค่า input
+        
         document.getElementById("input").value = "";
       }
     </script>
